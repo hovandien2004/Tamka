@@ -1,0 +1,53 @@
+Bài 3: Hàm (function)
+
+1.giới thiệu
+2.Các loại hàm
+a.Hàm trả về 1 giá trị:
+	*Cú pháp:
+		create/alter function<tên hàm>
+		(
+			[ds các tham số truyền vào]
+		)
+		returns <Kiểu dữ liệu trả về>
+		as
+		begin
+			<các câu lệnh>
+			return <gia trị trả về>
+		end
+*Lời gọi:
+select dbo<Tên hàm>([các giá trị truyền vao tương ứng])
+*xóa hàm:
+drop function <tên hàm>
+
+b.Hàm trả về một bảng giá trị (danh sách)
+*Cú pháp:
+	create/alter function <Tên hàm>
+	(
+		[ds các tham số]
+	)
+	returns table
+	as
+		return(câu lệnh select)
+--lời gọi
+select *
+from dbo.<tên hàm>([các giá trị tương ứng])
+
+c.Hàm trả về bảng dữ liệu thông qua nhiều câu lệnh
+*Cú pháp:
+	create/alter function <tên hàm>
+	(
+		[ds các tham số]
+	)
+	returns @tenbien table(ds các cột)
+	as
+	begin
+		<Các câu lệnh>
+		insert into @tenebien..
+		...
+		return
+	end
+*Lời gọi:
+select *
+from <tên hàm> ([các giá trị tương ứng])
+
+		
