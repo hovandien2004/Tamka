@@ -1,0 +1,30 @@
+*Bảo mật trong sql:
+-Tạo tài khoản đăng nhập:
+create login <tenlogin> with password = '...'
+-Tạo người dùng:
+create user <tenuser> for login <tenlogin>
+-Cấp quyền thao tác các câu lệnh:
+grant insert, delete, update, select
+on <TenBang>[ds các câu lệnh]
+to <TenUser>
+
+- Cấp quyền thao tác thủ tục:
+	grant execute
+	on <TenThuTuc>
+	to <TenUser>
+- Cấp quyền thao tác hàm:
+	grant select
+	on <TenHam>
+	to <TenUser>
+- Hủy quyền thao tác:
+	revoke insert, delete, update, select
+	on <TenBang>[(Ds các câu lệnh)]
+	from <TenUser>
+- Hủy quyền thao tác thủ tục:
+	revoke execute
+	on <TenThuTuc>
+	from <TenUser>
+- Hủy quyền thao tác hàm:
+	revoke select
+	on <TenHam>
+	from <TenUser>
