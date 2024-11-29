@@ -3,3 +3,5 @@ https://docs.google.com/spreadsheets/d/18YKcDEaxvnBIJseha77pQ69tVsY-IbieXwGVm6JW
 begin [transaction/tran]: bắt đầu
 commit [transaction/tran]: kết thúc
 rollback [transaction/tran]: quay lui, hủy bỏ toàn bộ phần giao tác đã thực hiện trước đó
+
+Trong sql server dùng biến toàn cục @@error và @@rowcount
