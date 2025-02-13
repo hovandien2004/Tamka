@@ -5,3 +5,4 @@ commit [transaction/tran]: kết thúc
 rollback [transaction/tran]: quay lui, hủy bỏ toàn bộ phần giao tác đã thực hiện trước đó
 
 Trong sql server dùng biến toàn cục @@error và @@rowcount
+https://drive.google.com/file/d/1kX3cid9VNUr2szAngeE4r-wJU-DpFOLO/view?usp=drive_link
